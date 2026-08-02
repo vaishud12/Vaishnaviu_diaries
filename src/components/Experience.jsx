@@ -82,7 +82,7 @@ export default function Experience() {
           {experiences.map((exp, i) => {
             const isLeft = i % 2 === 0
             return (
-              <div key={exp.role} className="tl-card" style={{
+              <div key={exp.role} className="tl-card tl-row" style={{
                 position: 'relative',
                 display: 'grid',
                 gridTemplateColumns: isLeft ? '1fr 52px 1fr' : '1fr 52px 1fr',
@@ -110,7 +110,7 @@ export default function Experience() {
                 </div>
 
                 {/* Card — alternates sides */}
-                <div className="glass-card" style={{
+                <div className="glass-card tl-card-col" style={{
                   padding: 28,
                   ...(isLeft ? { justifySelf: 'end', marginRight: 8 } : { justifySelf: 'start', marginLeft: 8, gridColumn: '3' }),
                 }}>

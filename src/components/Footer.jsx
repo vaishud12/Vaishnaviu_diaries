@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer style={{ width: 'min(1180px, calc(100vw - 40px))', margin: '0 auto', padding: '0 0 42px', display: 'flex', justifyContent: 'space-between', gap: 16, color: 'var(--text-dim)', fontSize: '.92rem' }}>
+    <footer className="footer-strip" style={{ width: 'min(1180px, calc(100vw - 40px))', margin: '0 auto', padding: '0 0 42px', display: 'flex', justifyContent: 'space-between', gap: 16, color: 'var(--text-dim)', fontSize: '.92rem' }}>
       <span>&copy; {currentYear} Vaishnavi Devardekar. All rights reserved.</span>
       <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
         <a href="https://github.com/vaishud12" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-dim)', transition: 'color .18s' }}><GithubIcon size={18} /></a>

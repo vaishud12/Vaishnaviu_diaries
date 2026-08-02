@@ -6,7 +6,7 @@ const blogPosts = [
     desc: 'Wondered of choosing the best Database',
     category: 'Database',
     date: 'March 2024',
-    link: 'https://vaishutechtalks.blogspot.com/2024/10/database.html',
+    link: 'https://app.notion.com/p/Database-3b07055a538f805f831bc52b8c9447a0?source=copy_link',
     gradient: 'linear-gradient(135deg, #6366f1, #a855f7)',
     image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop',
   },
@@ -15,7 +15,7 @@ const blogPosts = [
     desc: 'The Future of AI in Risk Management: Transforming Challenges into Opportunities',
     category: 'Tech',
     date: 'Sept 15, 2024',
-    link: '#',
+    link: 'https://app.notion.com/p/The-Future-of-AI-in-Risk-Management-3af7055a538f807ca7bed7acf267e256?source=copy_link',
     gradient: 'linear-gradient(135deg, #ec4899, #f472b6)',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
   },
@@ -24,7 +24,7 @@ const blogPosts = [
     desc: 'Why Python is the Go-To Language for Data Analysis',
     category: 'Tech',
     date: 'Oct 24, 2024',
-    link: 'https://vaishutechtalks.blogspot.com/2024/10/future-of-ai-in-risk-management-part-4.html',
+    link: 'https://app.notion.com/p/Data-Analysis-in-Python-and-AI-3b07055a538f8010a01cd853036489df?source=copy_link',
     gradient: 'linear-gradient(135deg, #06b6d4, #3b82f6)',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
   },
@@ -33,7 +33,7 @@ const blogPosts = [
     desc: 'The Future of AI in Risk Management: Part 3',
     category: 'Tech',
     date: 'Oct 16, 2024',
-    link: 'https://vaishutechtalks.blogspot.com/2024/10/future-of-ai-in-risk-management-part-3.html',
+    link: 'https://app.notion.com/p/Part-3-AI-in-Risk-Management-3b07055a538f80c984cdf9144d53fd23?source=copy_link',
     gradient: 'linear-gradient(135deg, #22c55e, #06b6d4)',
     image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=600&h=400&fit=crop',
   },
@@ -42,7 +42,7 @@ const blogPosts = [
     desc: 'Practical Applications of AI in Risk Management',
     category: 'Tech',
     date: 'Oct 19, 2024',
-    link: 'https://vaishutechtalks.blogspot.com/2024/10/future-of-ai-in-risk-management-part-4.html',
+    link: 'https://app.notion.com/p/Part-4-The-Future-of-AI-in-Risk-Management-3b07055a538f8079bcc1e62bb1e62b86?source=copy_link',
     gradient: 'linear-gradient(135deg, #f59e0b, #ef4444)',
     image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop',
   },
@@ -68,13 +68,10 @@ export default function Blog() {
         className="scrollbar-hide"
       >
         {blogPosts.map((post) => (
-          <a
+          <div
             key={post.title}
-            href={post.link}
-            target="_blank"
-            rel="noopener noreferrer"
             style={{
-              flex: '0 0 320px',
+              flex: '0 0 min(320px, 82vw)',
               scrollSnapAlign: 'start',
               textDecoration: 'none',
             }}
@@ -149,7 +146,7 @@ export default function Blog() {
                   margin: '0 0 auto',
                 }}>{post.desc}</p>
 
-                <div style={{
+                <a href={post.link} target="_blank" rel="noopener noreferrer" style={{
                   marginTop: 18,
                   paddingTop: 16,
                   borderTop: '1px solid rgba(255,255,255,.06)',
@@ -161,10 +158,10 @@ export default function Blog() {
                   fontWeight: 700,
                 }}>
                   Read More <ExternalLink size={14} />
-                </div>
+                </a>
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </section>

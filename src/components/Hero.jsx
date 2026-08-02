@@ -5,16 +5,17 @@ import MagicRings from './MagicRings'
 
 const techChips = [
   { label: 'React', style: { top: '2%', left: '10%', animation: 'floatChip 5s ease-in-out infinite' } },
-  { label: 'TypeScript', style: { top: '22%', right: '-5%', animation: 'floatChip 6.2s ease-in-out infinite' } },
+  { label: 'GO', style: { top: '22%', right: '-5%', animation: 'floatChip 6.2s ease-in-out infinite' } },
   { label: 'Node.js', style: { top: '48%', left: '-6%', animation: 'floatChip 4.7s ease-in-out infinite' } },
-  { label: 'Tailwind', style: { top: '75%', right: '2%', animation: 'floatChip 5.8s ease-in-out infinite' } },
-  { label: 'AWS', style: { bottom: '5%', left: '14%', animation: 'floatChip 6.4s ease-in-out infinite' } },
-  { label: 'PostgreSQL', style: { bottom: '18%', right: '22%', animation: 'floatChip 5.1s ease-in-out infinite' } },
+  { label: 'AI/ML', style: { top: '75%', right: '2%', animation: 'floatChip 5.8s ease-in-out infinite' } },
+  { label: 'Python', style: { bottom: '5%', left: '14%', animation: 'floatChip 6.4s ease-in-out infinite' } },
+  { label: 'Data', style: { bottom: '18%', right: '22%', animation: 'floatChip 5.1s ease-in-out infinite' } },
+  { label: 'Database', style: { top: '6%', left: '40%', animation: 'floatChip 6.3s ease-in-out infinite' } },
 ]
 
 export default function Hero() {
   const [typedText, setTypedText] = useState('')
-  const fullText = 'Software Engineer'
+  const fullText = 'Software Engineer | Data Scientist'
   const [index, setIndex] = useState(0)
   const titleRef = useRef(null)
   const descRef = useRef(null)
@@ -48,7 +49,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="home" className="hero" style={{
+    <section id="home" className="hero hero-grid" style={{
       minHeight: 'calc(100vh - 140px)',
       display: 'grid',
       gridTemplateColumns: 'minmax(0, 1.04fr) minmax(320px, .96fr)',
@@ -114,9 +115,24 @@ export default function Hero() {
           }} />
         </div>
 
-        <p ref={descRef} style={{ fontFamily: "'Inter', sans-serif", color: 'var(--text-soft)', fontSize: '1.05rem', lineHeight: 1.85, maxWidth: '64ch', margin: '0 0 30px', fontWeight: 400 }}>
-          Driven by an enthusiastic commitment to building scalable, market-ready enterprise assets. Passionate about transforming mission-critical data into high-performance solutions that empower strategic business decision-making.
-        </p>
+        <div ref={descRef} style={{ display: 'grid', gap: 14, margin: '0 0 30px', maxWidth: '64ch' }}>
+          <p style={{
+            display: 'inline-flex', alignItems: 'center', flexWrap: 'wrap', gap: 10,
+            padding: '14px 18px', borderRadius: 18,
+            border: '1px solid rgba(168,85,247,.35)',
+            background: 'linear-gradient(90deg, rgba(168,85,247,.16), rgba(192,132,252,.06))',
+            boxShadow: '0 0 30px rgba(168,85,247,.18)',
+            fontFamily: "'Inter', sans-serif", color: '#fff', fontSize: '1.1rem', lineHeight: 1.65, fontWeight: 600, margin: 0,
+          }}>
+            <span className="pulse-dot" style={{ width: 9, height: 9 }} />
+            <span>
+              Pivoting towards the <strong style={{ color: 'var(--aqua)', textShadow: '0 0 18px rgba(192,132,252,.5)' }}>data &amp; AI domain</strong>, actively upskilling to contribute to <strong style={{ color: 'var(--aqua)', textShadow: '0 0 18px rgba(192,132,252,.5)' }}>complex data management</strong> challenges.
+            </span>
+          </p>
+          <p style={{ fontFamily: "'Inter', sans-serif", color: 'var(--text-soft)', fontSize: '1.05rem', lineHeight: 1.85, fontWeight: 400, margin: 0 }}>
+            Driven by an enthusiastic commitment to building scalable, market-ready enterprise assets. Passionate about transforming mission-critical data into high-performance solutions that empower strategic business decision-making.
+          </p>
+        </div>
 
         <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 34 }}>
           <a href="#projects" className="pill-button pill-primary">
@@ -128,13 +144,13 @@ export default function Hero() {
         </div>
 
         {/* Metrics */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: 18 }}>
+        <div className="hero-metrics" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: 18 }}>
           {[
             { value: '3+', label: 'Years Experience' },
             { value: '15+', label: 'Projects Shipped' },
             { value: '10+', label: 'Technologies' },
           ].map((m) => (
-            <div key={m.label} className="glass-card" style={{ minHeight: 130, padding: 22, borderRadius: 24 }}>
+            <div key={m.label} className="glass-card hero-metric" style={{ minHeight: 130, padding: 22, borderRadius: 24 }}>
               <span style={{ display: 'block', marginTop: 16, fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: '2rem', fontWeight: 700, color: '#fff' }}>
                 {m.value}
               </span>

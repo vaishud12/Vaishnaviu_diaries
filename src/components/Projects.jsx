@@ -50,7 +50,7 @@ export default function Projects() {
         <p style={{ color: 'var(--text-soft)', fontSize: '1.05rem', maxWidth: '56ch', margin: '0 auto' }}>Where high-performance architecture meets enterprise-grade execution</p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 18 }}>
+      <div className="proj-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 18 }}>
         {projects.map((project) => (
           <div key={project.title} className="glass-card" style={{ padding: 26, minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 12, marginBottom: 24, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '.12em', fontSize: '.72rem', fontWeight: 800 }}>

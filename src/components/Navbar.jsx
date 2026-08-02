@@ -8,6 +8,7 @@ const links = [
   { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
+  {id: 'blog', label: 'Blogs' },
   { id: 'contact', label: 'Contact' },
 ]
 
@@ -24,8 +25,8 @@ export default function Navbar({ active }) {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 14 }}>
             <div style={{ width: 50, height: 50, borderRadius: 16, background: 'linear-gradient(145deg, rgba(168,85,247,.25), rgba(192,132,252,.42)), #0f0820', border: '1px solid rgba(255,255,255,.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontWeight: 700, fontSize: 18, color: '#fff' }}>V</div>
             <div style={{ display: 'grid', gap: 2 }}>
-              <strong style={{ fontSize: '.96rem', color: '#f4f7ff' }}>Vaishnavi</strong>
-              <small style={{ color: 'rgba(198,211,255,.48)', fontSize: '.8rem' }}>Software Engineer</small>
+              <strong style={{ fontSize: '.96rem', color: '#f4f7ff', whiteSpace: 'nowrap' }}>Vaishnavi Devardekar</strong>
+              <small style={{ color: 'rgba(198,211,255,.48)', fontSize: '.8rem', whiteSpace: 'nowrap' }}>Tech Enthusiast</small>
             </div>
           </div>
         </div>
@@ -40,8 +41,8 @@ export default function Navbar({ active }) {
         <a href="#home" style={{ display: 'inline-flex', alignItems: 'center', gap: 14, minWidth: 0 }}>
           <div style={{ width: 50, height: 50, borderRadius: 16, background: 'linear-gradient(145deg, rgba(168,85,247,.25), rgba(192,132,252,.42)), #0f0820', border: '1px solid rgba(255,255,255,.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontWeight: 700, fontSize: 18, color: '#fff', boxShadow: 'inset 0 1px rgba(255,255,255,.14)', flexShrink: 0 }}>V</div>
           <div style={{ display: 'grid', gap: 2 }}>
-            <strong style={{ fontSize: '.96rem', color: '#f4f7ff' }}>Vaishnavi</strong>
-            <small style={{ color: 'rgba(198,211,255,.48)', fontSize: '.8rem' }}>Software Engineer</small>
+            <strong style={{ fontSize: '.96rem', color: '#f4f7ff', whiteSpace: 'nowrap' }}>Vaishnavi Devardekar</strong>
+            <small style={{ color: 'rgba(198,211,255,.48)', fontSize: '.8rem', whiteSpace: 'nowrap' }}>Tech Enthusiast</small>
           </div>
         </a>
 

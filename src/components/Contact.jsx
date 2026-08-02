@@ -46,7 +46,7 @@ export default function Contact() {
           Have a project in mind or just want to say hi? I'd love to hear from you.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 18 }}>
+        <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 18 }}>
           {/* Left: Info */}
           <div style={{ display: 'grid', gap: 14 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', borderRadius: 22, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)' }}>
