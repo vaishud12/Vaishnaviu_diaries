@@ -92,7 +92,7 @@ export default function About() {
             <h3 style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: '1.5rem', lineHeight: 1.2, margin: '0 0 20px', color: '#fff' }}>My Journey</h3>
             <div style={{ display: 'grid', gap: 16, color: 'var(--text-soft)', fontSize: '1.05rem', lineHeight: 1.85 }}>
               <p>
-                I'm a <strong style={{ color: '#fff' }}>Software Engineer</strong> with <strong style={{ color: '#fff' }}>3+ years</strong> specializing in <strong style={{ color: '#fff' }}>React</strong> and full-stack solutions.
+                I'm a <strong style={{ color: '#fff' }}>Software Engineer</strong> with <strong style={{ color: '#fff' }}>2+ years</strong> specializing in <strong style={{ color: '#fff' }}>React</strong> and full-stack solutions.
                 Currently at <span style={{ color: 'var(--aqua)' }}>GSTAMP Software Solutions</span> building enterprise-grade data protection platforms.
               </p>
               <p>

@@ -146,7 +146,7 @@ export default function Hero() {
         {/* Metrics */}
         <div className="hero-metrics" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: 18 }}>
           {[
-            { value: '3+', label: 'Years Experience' },
+            { value: '2+', label: 'Years Experience' },
             { value: '15+', label: 'Projects Shipped' },
             { value: '10+', label: 'Technologies' },
           ].map((m) => (
