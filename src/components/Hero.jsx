@@ -141,6 +141,9 @@ export default function Hero() {
           <a href="#contact" className="pill-button pill-secondary">
             <span>Get in Touch</span>
           </a>
+          <a href="https://drive.google.com/uc?export=download&id=1z4mYfz-T8zzuxKbapLvzWSiQnml0yBg0" target="_blank" rel="noopener noreferrer" className="pill-button pill-secondary">
+            <span>⬇ Download Resume</span>
+          </a>
         </div>
 
         {/* Metrics */}
