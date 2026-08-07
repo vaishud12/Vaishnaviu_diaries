@@ -149,7 +149,7 @@ export default function About() {
 
             {/* Live metrics strip - fills the gap, ticks in real time */}
             <div style={{ padding: '4px 22px 22px', display: 'grid', gap: 14 }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 12 }}>
                 <div style={{ padding: '12px 14px', borderRadius: 16, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)' }}>
                   <div style={{ color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '.12em', fontSize: '.6rem', fontWeight: 800, marginBottom: 6, display: 'flex', alignItems: 'center', gap: 6 }}>
                     <span className="pulse-dot" style={{ width: 6, height: 6 }} /> Build
@@ -168,33 +168,33 @@ export default function About() {
 
               {/* Engineering focus pillars */}
               <div style={{ display: 'grid', gap: 8 }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, padding: '8px 10px', borderRadius: 10, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#fff', fontSize: '.76rem', fontWeight: 700, whiteSpace: 'nowrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, padding: '8px 10px', borderRadius: 10, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)', flexWrap: 'wrap' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#fff', fontSize: '.76rem', fontWeight: 700 }}>
                     <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#818cf8', boxShadow: '0 0 8px rgba(129,140,248,.4)' }} /> Software Engineering
                   </span>
-                  <span style={{ padding: '4px 9px', borderRadius: 999, fontSize: '.58rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.1em', border: '1px solid rgba(129,140,248,.3)', background: 'rgba(129,140,248,.1)', color: '#a5b4fc', whiteSpace: 'nowrap' }}>Production</span>
+                  <span style={{ padding: '4px 9px', borderRadius: 999, fontSize: '.58rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.1em', border: '1px solid rgba(129,140,248,.3)', background: 'rgba(129,140,248,.1)', color: '#a5b4fc' }}>Production</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, padding: '8px 10px', borderRadius: 10, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#fff', fontSize: '.76rem', fontWeight: 700, whiteSpace: 'nowrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, padding: '8px 10px', borderRadius: 10, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)', flexWrap: 'wrap' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#fff', fontSize: '.76rem', fontWeight: 700 }}>
                     <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#34d399', boxShadow: '0 0 8px rgba(52,211,153,.4)' }} /> Data Foundations
                   </span>
-                  <span style={{ padding: '4px 9px', borderRadius: 999, fontSize: '.58rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.1em', border: '1px solid rgba(52,211,153,.3)', background: 'rgba(52,211,153,.1)', color: '#6ee7b7', whiteSpace: 'nowrap' }}>Active Learning</span>
+                  <span style={{ padding: '4px 9px', borderRadius: 999, fontSize: '.58rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.1em', border: '1px solid rgba(52,211,153,.3)', background: 'rgba(52,211,153,.1)', color: '#6ee7b7' }}>Active Learning</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, padding: '8px 10px', borderRadius: 10, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#fff', fontSize: '.76rem', fontWeight: 700, whiteSpace: 'nowrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, padding: '8px 10px', borderRadius: 10, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)', flexWrap: 'wrap' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#fff', fontSize: '.76rem', fontWeight: 700 }}>
                     <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#fbbf24', boxShadow: '0 0 8px rgba(251,191,36,.4)' }} /> AI / Machine Learning
                   </span>
-                  <span style={{ padding: '4px 9px', borderRadius: 999, fontSize: '.58rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.1em', border: '1px solid rgba(251,191,36,.3)', background: 'rgba(251,191,36,.1)', color: '#fcd34d', whiteSpace: 'nowrap' }}>Experimenting</span>
+                  <span style={{ padding: '4px 9px', borderRadius: 999, fontSize: '.58rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.1em', border: '1px solid rgba(251,191,36,.3)', background: 'rgba(251,191,36,.1)', color: '#fcd34d' }}>Experimenting</span>
                 </div>
               </div>
             </div>
 
             <div style={{ padding: 22, marginTop: 'auto' }}>
               {/* Stack / Mode */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18, paddingTop: 18, borderTop: '1px solid rgba(255,255,255,.08)' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 18, paddingTop: 18, borderTop: '1px solid rgba(255,255,255,.08)' }}>
                 <div>
                   <div style={{ color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '.14em', fontSize: '.68rem', fontWeight: 800, marginBottom: 6 }}>Stack</div>
-                  <strong style={{ color: '#fff', fontSize: '.92rem', lineHeight: 1.5 }}>React + Next.js + Go + Node.js + Python + AI</strong>
+                  <strong style={{ color: '#fff', fontSize: '.92rem', lineHeight: 1.5, wordBreak: 'break-word' }}>React + Next.js + Go + Node.js + Python + AI</strong>
                 </div>
                 <div>
                   <div style={{ color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '.14em', fontSize: '.68rem', fontWeight: 800, marginBottom: 6 }}>Mode</div>
@@ -206,7 +206,7 @@ export default function About() {
               </div>
 
               {/* Role / Location */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 18 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 14, marginTop: 18 }}>
                 <div style={{ padding: '14px 16px', borderRadius: 18, border: '1px solid rgba(255,255,255,.08)', background: 'rgba(255,255,255,.03)' }}>
                   <div style={{ color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '.14em', fontSize: '.64rem', fontWeight: 800, marginBottom: 6 }}>Current Role</div>
                   <strong style={{ color: '#fff', fontSize: '.86rem', lineHeight: 1.45 }}>Software Engineer @ GSTAMP</strong>

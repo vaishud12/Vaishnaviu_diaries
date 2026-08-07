@@ -4,7 +4,7 @@ const experiences = [
   {
     role: 'Software Engineer',
     company: 'GSTAMP Software Solutions',
-    client: 'Cient - ConnectWise',
+    client: 'Client - ConnectWise',
     period: 'Jan 2025 — Present',
     current: true,
     gradient: 'linear-gradient(135deg, #a855f7, #c084fc)',

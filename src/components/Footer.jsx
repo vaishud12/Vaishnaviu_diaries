@@ -12,7 +12,7 @@ export default function Footer() {
         <a href="https://www.linkedin.com/in/vaishuu" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-dim)', transition: 'color .18s' }}><LinkedinIcon size={18} /></a>
         <a href="https://x.com/Pearl_vaish23" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-dim)', transition: 'color .18s' }}><TwitterIcon size={18} /></a>
         <a href="https://www.instagram.com/vaishnaviu.diaries/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-dim)', transition: 'color .18s' }}><InstagramIcon size={18} /></a>
-        <a href="mailto:vaishnavi.devardekar@email.com" style={{ color: 'var(--text-dim)', transition: 'color .18s' }}><Mail size={18} /></a>
+        <a href="mailto:vaishnavisd23@gmail.com" style={{ color: 'var(--text-dim)', transition: 'color .18s' }}><Mail size={18} /></a>
       </div>
     </footer>
   )

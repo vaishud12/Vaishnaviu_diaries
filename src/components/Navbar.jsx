@@ -22,11 +22,11 @@ export default function Navbar({ active }) {
     return (
       <header className="sticky top-[18px] z-20" style={{ width: 'min(1180px, calc(100vw - 40px))', margin: '22px auto 0' }}>
         <div style={{ padding: '14px 18px', display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 16, border: '1px solid rgba(130,162,255,.14)', borderRadius: 999, background: 'rgba(5,10,22,.72)', backdropFilter: 'blur(16px)' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 14 }}>
-            <div style={{ width: 50, height: 50, borderRadius: 16, background: 'linear-gradient(145deg, rgba(168,85,247,.25), rgba(192,132,252,.42)), #0f0820', border: '1px solid rgba(255,255,255,.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontWeight: 700, fontSize: 18, color: '#fff' }}>V</div>
-            <div style={{ display: 'grid', gap: 2 }}>
-              <strong style={{ fontSize: '.96rem', color: '#f4f7ff', whiteSpace: 'nowrap' }}>Vaishnavi Devardekar</strong>
-              <small style={{ color: 'rgba(198,211,255,.48)', fontSize: '.8rem', whiteSpace: 'nowrap' }}>Tech Enthusiast</small>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12 }}>
+            <div style={{ width: 46, height: 46, borderRadius: 16, background: 'linear-gradient(145deg, rgba(168,85,247,.25), rgba(192,132,252,.42)), #0f0820', border: '1px solid rgba(255,255,255,.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontWeight: 700, fontSize: 18, color: '#fff', flexShrink: 0 }}>V</div>
+            <div style={{ minWidth: 0, overflow: 'hidden' }}>
+              <strong style={{ display: 'block', fontSize: 'clamp(.82rem, 3.4vw, .96rem)', color: '#f4f7ff', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Vaishnavi Devardekar</strong>
+              <small className="hidden sm:block" style={{ fontSize: 'clamp(.64rem, 2.4vw, .8rem)', color: 'rgba(198,211,255,.48)', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Tech Enthusiast</small>
             </div>
           </div>
         </div>
@@ -36,21 +36,21 @@ export default function Navbar({ active }) {
 
   return (
     <header className="sticky top-[18px] z-20" style={{ width: 'min(1180px, calc(100vw - 40px))', margin: '22px auto 0' }}>
-      <nav style={{ padding: '14px 18px', display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 16, border: '1px solid rgba(130,162,255,.14)', borderRadius: 999, background: 'rgba(5,10,22,.72)', backdropFilter: 'blur(16px)', boxShadow: '0 20px 60px rgba(0,0,0,.28)' }}>
+      <nav style={{ padding: '14px 18px', display: 'flex', alignItems: 'center', gap: 12, border: '1px solid rgba(130,162,255,.14)', borderRadius: 999, background: 'rgba(5,10,22,.72)', backdropFilter: 'blur(16px)', boxShadow: '0 20px 60px rgba(0,0,0,.28)' }}>
         {/* Brand */}
-        <a href="#home" style={{ display: 'inline-flex', alignItems: 'center', gap: 14, minWidth: 0 }}>
-          <div style={{ width: 50, height: 50, borderRadius: 16, background: 'linear-gradient(145deg, rgba(168,85,247,.25), rgba(192,132,252,.42)), #0f0820', border: '1px solid rgba(255,255,255,.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontWeight: 700, fontSize: 18, color: '#fff', boxShadow: 'inset 0 1px rgba(255,255,255,.14)', flexShrink: 0 }}>V</div>
-          <div style={{ display: 'grid', gap: 2 }}>
-            <strong style={{ fontSize: '.96rem', color: '#f4f7ff', whiteSpace: 'nowrap' }}>Vaishnavi Devardekar</strong>
-            <small style={{ color: 'rgba(198,211,255,.48)', fontSize: '.8rem', whiteSpace: 'nowrap' }}>Tech Enthusiast</small>
+        <a href="#home" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, minWidth: 0, flexShrink: 1 }}>
+          <div style={{ width: 46, height: 46, borderRadius: 16, background: 'linear-gradient(145deg, rgba(168,85,247,.25), rgba(192,132,252,.42)), #0f0820', border: '1px solid rgba(255,255,255,.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontWeight: 700, fontSize: 18, color: '#fff', boxShadow: 'inset 0 1px rgba(255,255,255,.14)', flexShrink: 0 }}>V</div>
+          <div style={{ minWidth: 0, overflow: 'hidden' }}>
+            <strong style={{ display: 'block', fontSize: 'clamp(.82rem, 3.4vw, .96rem)', color: '#f4f7ff', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Vaishnavi Devardekar</strong>
+            <small className="hidden sm:block" style={{ fontSize: 'clamp(.64rem, 2.4vw, .8rem)', color: 'rgba(198,211,255,.48)', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Tech Enthusiast</small>
           </div>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex" style={{ justifyContent: 'center', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+        <div className="hidden lg:flex" style={{ flex: 1, justifyContent: 'center', alignItems: 'center', gap: 4, flexWrap: 'wrap' }}>
           {links.map((l) => (
             <a key={l.id} href={`#${l.id}`} style={{
-              padding: '11px 15px', borderRadius: 999, fontSize: '.84rem', fontWeight: 700, letterSpacing: '.03em',
+              padding: '10px 12px', borderRadius: 999, fontSize: '.8rem', fontWeight: 700, letterSpacing: '.03em',
               color: active === l.id ? '#f4f7ff' : 'rgba(198,211,255,.48)',
               background: active === l.id ? 'rgba(255,255,255,.06)' : 'transparent',
               transition: 'all .18s ease'
@@ -62,15 +62,15 @@ export default function Navbar({ active }) {
 
         {/* CTA */}
         <a href="#contact" className="hidden lg:inline-flex" style={{
-          padding: '11px 15px', borderRadius: 999, fontSize: '.84rem', fontWeight: 800,
+          padding: '11px 15px', borderRadius: 999, fontSize: '.84rem', fontWeight: 800, flexShrink: 0,
           border: '1px solid rgba(168,85,247,.24)', background: 'rgba(168,85,247,.09)', color: '#d8c8ff',
           whiteSpace: 'nowrap'
         }}>
           Let's Talk
         </a>
 
-        {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="lg:hidden" style={{ padding: 8, color: 'rgba(198,211,255,.48)' }} aria-label="Toggle menu">
+        {/* Mobile toggle - always at the far end of the navbar */}
+        <button onClick={() => setOpen(!open)} className="lg:hidden" style={{ marginLeft: 'auto', padding: 8, color: 'rgba(198,211,255,.48)', flexShrink: 0 }} aria-label="Toggle menu">
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>

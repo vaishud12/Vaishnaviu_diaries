@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './Icons'
-import { Mail, MapPin, Send, CheckCircle, Loader2 } from 'lucide-react'
+import { Mail, MapPin, Send, Loader2 } from 'lucide-react'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -18,6 +19,9 @@ export default function Contact() {
         {
           from_name: form.name,
           from_email: form.email,
+          name: form.name,
+          email: form.email,
+          reply_to: form.email,
           message: form.message,
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
@@ -109,9 +113,43 @@ export default function Contact() {
                 <Loader2 size={18} className="animate-spin" /> Sending...
               </button>
             ) : status === 'success' ? (
-              <div style={{ padding: '16px 24px', borderRadius: 999, background: 'rgba(168,85,247,.08)', border: '1px solid rgba(168,85,247,.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, color: 'var(--aqua)', fontSize: '.92rem', fontWeight: 800 }}>
-                <CheckCircle size={18} /> Message sent!
-              </div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 16 }}
+                style={{
+                  padding: '30px 24px', borderRadius: 28, textAlign: 'center', position: 'relative', overflow: 'hidden',
+                  border: '1px solid rgba(168,85,247,.25)',
+                  background: 'radial-gradient(circle at 50% 0%, rgba(168,85,247,.16), transparent 60%), rgba(10,6,20,.6)',
+                }}
+              >
+                {['✨', '📩', '💼', '☕', '🎯'].map((e, i) => (
+                  <motion.span
+                    key={i}
+                    style={{ position: 'absolute', left: `${8 + i * 17}%`, bottom: 0, fontSize: '1.3rem', opacity: 0, zIndex: 0 }}
+                    initial={{ y: 40, opacity: 0 }}
+                    animate={{ y: -70, opacity: [0, 1, 0], scale: [0.6, 1.2, 1] }}
+                    transition={{ duration: 2.6, repeat: Infinity, delay: i * 0.4, ease: 'easeOut' }}
+                  >
+                    {e}
+                  </motion.span>
+                ))}
+                <motion.div
+                  animate={{ y: [0, -10, 0], rotate: [0, -6, 6, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
+                  style={{ fontSize: 56, lineHeight: 1, position: 'relative', zIndex: 1 }}
+                >
+                  🎉
+                </motion.div>
+                <div style={{ marginTop: 12, position: 'relative', zIndex: 1 }}>
+                  <strong style={{ display: 'block', color: '#fff', fontSize: '1.12rem', fontWeight: 800, lineHeight: 1.4 }}>
+                    Thank you for contacting Vaishnavi!
+                  </strong>
+                  <span style={{ display: 'block', color: 'var(--text-soft)', fontSize: '.92rem', marginTop: 6, lineHeight: 1.5 }}>
+                    will reach out to you soon
+                  </span>
+                </div>
+              </motion.div>
             ) : status === 'error' ? (
               <div style={{ padding: '16px 24px', borderRadius: 999, background: 'rgba(239,68,68,.08)', border: '1px solid rgba(239,68,68,.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, color: '#ef4444', fontSize: '.92rem', fontWeight: 800 }}>
                 <span>✕</span> Failed to send. Try again?
