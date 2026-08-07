@@ -59,7 +59,7 @@ export default function Contact() {
               </div>
               <div>
                 <span style={{ display: 'block', color: 'var(--text-dim)', fontSize: '.72rem', textTransform: 'uppercase', letterSpacing: '.12em', fontWeight: 800 }}>Email</span>
-                <a href="mailto:vaishnavi.devardekar@email.com" style={{ display: 'block', color: 'var(--text-soft)', fontSize: '.92rem', fontWeight: 600 }}>vaishnavi.devardekar@email.com</a>
+                <a href="mailto:vaishnavisd23@gmail.com" style={{ display: 'block', color: 'var(--text-soft)', fontSize: '.92rem', fontWeight: 600 }}>vaishnavi.devardekar@email.com</a>
               </div>
             </div>
 
