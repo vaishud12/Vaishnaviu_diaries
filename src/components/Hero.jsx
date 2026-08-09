@@ -150,7 +150,7 @@ export default function Hero() {
         <div className="hero-metrics" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: 18 }}>
           {[
             { value: '2+', label: 'Years Experience' },
-            { value: '10+', label: 'Projects' },
+            { value: '8+', label: 'Projects' },
             { value: '10+', label: 'Technologies' },
           ].map((m) => (
             <div key={m.label} className="glass-card hero-metric" style={{ minHeight: 130, padding: 22, borderRadius: 24 }}>
